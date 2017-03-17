@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.user.snakesandladder.HomeActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/dice"
+        android:src="@drawable/d1"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="playTurn"
+ />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gameboard"
+        android:src="@drawable/pic3"
+        android:scaleType= "fitXY"
+        android:layout_alignBottom="@+id/yellowpieceonboard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer wins"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:id="@+id/status"
+        android:layout_above="@+id/dice"
+        android:layout_alignRight="@+id/dice"
+        android:layout_alignEnd="@+id/dice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/yellowpiece"
+        android:src="@drawable/p1"
+        android:layout_above="@+id/status"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-100dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/redpiece"
+        android:src="@drawable/p2"
+        android:layout_above="@+id/status"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Player 1"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:id="@+id/playerposition"
+        android:layout_above="@+id/dice"
+        android:layout_alignLeft="@+id/gameboard"
+        android:layout_alignStart="@+id/gameboard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer 1"
+        android:id="@+id/computerposition"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/dice"
+        android:layout_alignRight="@+id/gameboard"
+        android:layout_alignEnd="@+id/gameboard" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/yellowpieceonboard"
+        android:src="@drawable/p1"
+        android:scaleType="centerInside"
+
+
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="180dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/redpieceonboard"
+        android:src="@drawable/p2"
+        android:scaleType="centerInside"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to Roll"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/dice"
+        android:layout_alignLeft="@+id/gameboard"
+        android:layout_alignStart="@+id/gameboard" />
+
+</RelativeLayout>
